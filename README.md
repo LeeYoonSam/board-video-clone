@@ -58,9 +58,11 @@ Creating a new Next.js app in /Users/user/Documents/Github/board-video-tutorial.
   - 기본 코드 제거
 - npx shadcn-ui@latest add button
   - 버튼 컴포넌트 추가
-  
+
 
 ## [Project structure](https://www.youtube.com/watch?v=ADJKbuayubE&t=753s)
+- [Next.js Project Structure](https://nextjs.org/docs/getting-started/project-structure)
+- [Routing Fundamentals](https://nextjs.org/docs/app/building-your-application/routing)
 
 
 ## [Convex & Clerk](https://www.youtube.com/watch?v=ADJKbuayubE&t=1841s)
