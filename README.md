@@ -66,7 +66,45 @@ Creating a new Next.js app in /Users/user/Documents/Github/board-video-tutorial.
 
 
 ## [Convex & Clerk](https://www.youtube.com/watch?v=ADJKbuayubE&t=1841s)
+Convex - Backend, Database
+- [Convex Next.js Quickstart](https://docs.convex.dev/quickstart/nextjs)
 
+Convex 설치 및 실행
+- npm install convex
+- npx convex dev
+```bash
+npx convex dev
+Welcome to developing with Convex, let's get you logged in.
+? Device name: YS-Mac
+Visit https://auth.convex.dev/activate?user_code=NQGM-NDQF to finish logging in.
+You should see the following code which expires in 15 minutes: NQGM-NDQF
+? Open the browser? Yes
+✔ Saved credentials to ~/.convex/config.json
+? Project name: board-video-tutorial
+✔ Created project board-video-tutorial-ac6e1, manage it at https://dashboard.convex.dev/t/ys-albert-lee/board-video-tutorial-ac6e1
+✔ Provisioned a dev deployment and saved its:
+    name as CONVEX_DEPLOYMENT to .env.local
+    URL as NEXT_PUBLIC_CONVEX_URL to .env.local
+
+Write your Convex functions in convex/
+Give us feedback at https://convex.dev/community or support@convex.dev
+
+✔ 17:12:56 Convex functions ready! (1.79s)
+```
+
+[Clerk 어플리케이션 생성 및 초기화](https://dashboard.clerk.com/apps/app_2l653VEXR7e3YSI2euzPq11ZQLf/instances/ins_2l653XtqgqsVmNKWURSQ9vSEMGH)
+- npm install @clerk/nextjs
+- [convex authentication 설정](https://docs.convex.dev/auth/clerk)
+  - Clerk > JWT Templates > Convex 생성 > Issuer 사용
+  - convex/auth.config.js 생성
+    - domain: Issuer url 교체
+  - providers/convex-client-providers.tsx 생성
+    - Clerk, Convex Provider 설정
+  - app/layout.tsx 수정
+    - ConvexClientProviders 추가
+  - components/auth/loading.tsx 생성
+    - 로딩 컴포넌트 추가
+  
 
 ## [Dashboard layout](https://www.youtube.com/watch?v=ADJKbuayubE&t=3411s)
 
