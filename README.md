@@ -104,9 +104,50 @@ Give us feedback at https://convex.dev/community or support@convex.dev
     - ConvexClientProviders 추가
   - components/auth/loading.tsx 생성
     - 로딩 컴포넌트 추가
-  
+
+### 트러블 슈팅
+convex & clerk 의 authentication 연동이 안되어 로그인창이 안나옴
+
+**시도 방법**
+- 기존 처럼 ClerkProvider 를 사용하고, sign-in 폴더를 만들어서 로그인 한번 해주고 나니 정상 작동함
+- 로그아웃하면 다시 Unauthenticated 에러 발생
+- 리디렉트가 제대로 안되는 상태인듯..
+
+**해결**
+- middleware.ts 수정
+
+**경로 매칭 설정**
+```tsx
+const isProtectedRoute = createRouteMatcher([
+    '/(.*)',
+    '/',
+]);
+```
+- isProtectedRoute: 모든 경로가 보호되어야 하는지 확인하기 위해 사용됩니다. 여기서 - createRouteMatcher는 모든 경로를 포함하도록 설정되었습니다:
+  - '/(.*)': 모든 경로를 의미합니다. 즉, /로 시작하는 모든 경로가 포함됩니다.
+  - '/': 루트 경로(/)만 포함합니다.
+이 설정에 따라, 이 미들웨어는 Next.js 애플리케이션의 모든 경로가 보호되어야 한다고 가정합니다.
+
+**Clerk 미들웨어 적용**
+```tsx
+export default clerkMiddleware((auth, req) => {
+    if (isProtectedRoute(req)) auth().protect();
+});
+```
+- clerkMiddleware: 이 미들웨어를 통해 auth와 req 객체에 접근합니다.
+- if (isProtectedRoute(req)): 요청된 경로가 isProtectedRoute 조건을 만족하는지 확인합니다. 이 경우, 요청된 모든 경로가 포함됩니다.
+- auth().protect(): 경로가 보호되어야 한다고 판단되면, auth().protect() 메서드를 호출하여 사용자의 인증 상태를 확인하고, 인증되지 않은 경우 요청을 차단하거나 리다이렉트합니다.
+
 
 ## [Dashboard layout](https://www.youtube.com/watch?v=ADJKbuayubE&t=3411s)
+- app/(dashboard) 생성
+  - 대시보드 관련 생성
+- app/(dashboard)/layout.tsx 수정
+  - Sidebar, Navbar 추가
+- app/(dashboard)/_components/org-sidebar.tsx 생성
+  - 사이드바 컴포넌트
+- app/(dashboard)/_components/navbar.tsx 생성
+  - 네비게이션바 컴포넌트
 
 
 ## [Sidebar](https://www.youtube.com/watch?v=ADJKbuayubE&t=4225s)
