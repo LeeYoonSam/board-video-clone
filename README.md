@@ -151,6 +151,37 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Sidebar](https://www.youtube.com/watch?v=ADJKbuayubE&t=4225s)
+- Clerk Organizations Settings
+  - Clerk Dashboard > Organizations Settings > Enable organizations
+  - Clerk Dashboard > JWT Templates > convex > org_id, org_role 추가
+- Shadcn UI 추가
+  - npx shadcn@latest add dialog
+  - npx shadcn@latest add tooltip
+- app/(dashboard)/_components/sidebar/index.tsx 수정
+  - Clerk Organization 리스트 및 Organization 추가
+  - NewButton 컴포넌트 추가
+  - 리스트 컴포넌트 추가
+- app/(dashboard)/_components/sidebar/new-button.tsx 생성
+  - Clerk Organization 추가 컴포넌트
+- app/(dashboard)/_components/sidebar/list.tsx 생성
+  - Clerk OrganizationList 컴포넌트
+- app/(dashboard)/_components/sidebar/item.tsx 생성
+  - OrganizationList Item 컴포넌트
+- next.config.mjs 수정 (clerk 이미지를 불러오면 오류 발생)
+  - clerk 원격 패턴 추가
+  ```mjs
+  const nextConfig = {
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "img.clerk.com"
+        }
+      ]
+    }
+  };
+  ```
+- Clerk Organization
 
 
 ## [Organization Sidebar](https://www.youtube.com/watch?v=ADJKbuayubE&t=5701s)
