@@ -185,6 +185,10 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Organization Sidebar](https://www.youtube.com/watch?v=ADJKbuayubE&t=5701s)
+- app/(dashboard)/_components/org-sidebar.tsx 수정
+  - Organization Sidebar 컴포넌트
+  - OrganizationSwitcher 추가
+  - 보드 메뉴 추가(Link)
 
 
 ## [Navbar](https://www.youtube.com/watch?v=ADJKbuayubE&t=6589s)
