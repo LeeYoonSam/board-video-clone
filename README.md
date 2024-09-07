@@ -228,6 +228,18 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Create Mutation](https://www.youtube.com/watch?v=ADJKbuayubE&t=8602s)
+- `convex/schema.ts` 생성
+  - 테이블 스키마
+- `convex/board.ts` 생성
+  - API EndPoint
+- `public/placeholders` 이미지 추가
+- `hooks/use-api-mutation.ts` 생성
+  - useApiMutation 훅 생성
+- `app/(dashboard)/_components/empty-boards.tsx` 수정
+  - useApiMutation 사용하도록 수정
+- `app/layout.tsx` 수정
+  - Toaster 추가
+  - `npx shadcn@latest add sonner`
 
 
 ## [Board List](https://www.youtube.com/watch?v=ADJKbuayubE&t=9717s)
