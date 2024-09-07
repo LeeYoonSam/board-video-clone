@@ -208,6 +208,23 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Empty States](https://www.youtube.com/watch?v=ADJKbuayubE&t=7444s)
+- `app/(dashboard)/page.tsx` 수정
+  - EmptyOrg 컴포넌트 추가
+  - BoardList 컴포넌트 추가
+- `app/(dashboard)/_components/empty-org.tsx` 생성
+  - EmptyOrg 컴포넌트
+- `app/(dashboard)/_components/board-list.tsx` 생성
+  - BoardList 컴포넌트
+  - 케이스별 Empy 컴포넌트 추가
+- `app/(dashboard)/_components/empty-favorites.tsx` 생성
+  - EmptyFavorites 컴포넌트
+  - Favorite boards 없을때 보여줄 컴포넌트
+- `app/(dashboard)/_components/empty-search.tsx` 생성
+  - EmptySearch 컴포넌트
+  - 검색 결과 없을때 보여줄 컴포넌트 
+- `app/(dashboard)/_components/empty-boards.tsx` 생성
+  - EmptyBoards 컴포넌트
+  - Team boards 가 없을때 보여줄 컴포넌트
 
 
 ## [Create Mutation](https://www.youtube.com/watch?v=ADJKbuayubE&t=8602s)
