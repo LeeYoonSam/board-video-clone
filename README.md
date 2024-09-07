@@ -155,8 +155,8 @@ export default clerkMiddleware((auth, req) => {
   - Clerk Dashboard > Organizations Settings > Enable organizations
   - Clerk Dashboard > JWT Templates > convex > org_id, org_role 추가
 - Shadcn UI 추가
-  - npx shadcn@latest add dialog
-  - npx shadcn@latest add tooltip
+  - `npx shadcn@latest add dialog`
+  - `npx shadcn@latest add tooltip`
 - app/(dashboard)/_components/sidebar/index.tsx 수정
   - Clerk Organization 리스트 및 Organization 추가
   - NewButton 컴포넌트 추가
@@ -192,6 +192,19 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Navbar](https://www.youtube.com/watch?v=ADJKbuayubE&t=6589s)
+- app/(dashboard)/_components/navbar.tsx 수정
+  - SearchInput 컴포넌트 추가
+  - 모바일 크기에 맞게 OrganizationSwticher 컴포넌트 추가
+  - InviteButton 컴포넌트 추가
+- app/(dashboard)/_components/search-input.tsx 생성
+  - 검색 입력창 컴포넌트
+  - `npm i query-string`
+  - `npm i usehooks-ts`
+  - `npx shadcn@latest add input`
+  - debouncedValue 로 일정시간 입력 후 자동으로 url에 검색어 입력 되도록 useEffect 추가
+- app/(dashboard)/_components/invite-button.tsx 생성
+  - 초대 버튼 컴포넌트
+  - OrganizationProfile Dialog
 
 
 ## [Empty States](https://www.youtube.com/watch?v=ADJKbuayubE&t=7444s)
