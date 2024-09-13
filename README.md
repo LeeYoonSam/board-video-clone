@@ -240,9 +240,32 @@ export default clerkMiddleware((auth, req) => {
 - `app/layout.tsx` 수정
   - Toaster 추가
   - `npx shadcn@latest add sonner`
-
+- `app/(dashboard)/_components/board-list.tsx` 수정
+  - New board 버튼 추가
+  - 로딩시 스켈레톤 추가
+    - `npx shadcn@latest add skeleton`
+- `app/(dashboard)/_components/new-board-button.tsx` 생성
+  - New board 컴포넌트
+  - 스켈레톤 추가
+  
 
 ## [Board List](https://www.youtube.com/watch?v=ADJKbuayubE&t=9717s)
+- `convex/boards.ts` 생성
+  - 보드 쿼리 생성
+  - 쿼리 생성시 convex 실행 상태로 저장해야 최신데이터 반영 가능
+    - `npx convex dev`
+    - `convex/_generated/api.d.ts` 자동생성됨
+- `app/(dashboard)/_components/board-list.tsx` 수정
+  - BoardCard 컴포넌트 추가
+  - 실제 데이터로 수정
+- `app/(dashboard)/_components/board-card/index.tsx` 생성
+  - BoardCard 컴포넌트
+  - `app/(dashboard)/_components/board-card/overlay.tsx` 생성
+    - Overlay 컴포넌트 추가
+    - 카드뷰의 hover 구현
+  - `app/(dashboard)/_components/board-card/footer.tsx` 생성
+    - Footer 컴포넌트 추가
+    - 카드뷰의 하단 컴포넌트
 
 
 ## [Card Actions](https://www.youtube.com/watch?v=ADJKbuayubE&t=11668s)
