@@ -269,6 +269,17 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Card Actions](https://www.youtube.com/watch?v=ADJKbuayubE&t=11668s)
+- 라이브러리 추가
+  - `npx shadcn@latest add dropdown-menu`
+  - `npx shadcn@latest add alert-dialog`
+  - `npm i zustand`
+    - 상태 관리
+
+- `components/actions.tsx` 생성
+  - Actions 컴포넌트
+  - BoardCard 의 드롭다운 및 액션 처리
+- `app/(dashboard)/_components/board-card/index.tsx` 수정
+  - Actions 컴포넌트 추가
 
 
 ## [Favoriting Functionality](https://www.youtube.com/watch?v=ADJKbuayubE&t=14136s)
