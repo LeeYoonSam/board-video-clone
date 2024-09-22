@@ -274,12 +274,16 @@ export default clerkMiddleware((auth, req) => {
   - `npx shadcn@latest add alert-dialog`
   - `npm i zustand`
     - 상태 관리
-
 - `components/actions.tsx` 생성
   - Actions 컴포넌트
   - BoardCard 의 드롭다운 및 액션 처리
+  - 액션 기능 추가
+    - Copy board link 
+    - Delete board
 - `app/(dashboard)/_components/board-card/index.tsx` 수정
   - Actions 컴포넌트 추가
+- `convex/board.ts` 수정
+  - remove mutation 추가
 
 
 ## [Favoriting Functionality](https://www.youtube.com/watch?v=ADJKbuayubE&t=14136s)
