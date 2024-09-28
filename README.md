@@ -281,14 +281,18 @@ export default clerkMiddleware((auth, req) => {
     - Copy board link 
     - Delete board
       - ConfirmModal 로 모달 띄운 후 액션
+    - Reanme
 - `app/(dashboard)/_components/board-card/index.tsx` 수정
   - Actions 컴포넌트 추가
 - `convex/board.ts` 수정
   - remove mutation 추가
+  - update mutation 추가
 - `components/confirm-modal.tsx` 생성
   - 컨펌 모달 컴포넌트 추가
-
-
+- `components/modals/rename-modal.tsx` 생성
+  - 이름 변경 모달 컴포넌트
+- `app/layout.tsx` 수정
+  - ModalProvider 추가
 
 ## [Favoriting Functionality](https://www.youtube.com/watch?v=ADJKbuayubE&t=14136s)
 
