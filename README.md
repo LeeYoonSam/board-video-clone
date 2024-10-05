@@ -295,6 +295,19 @@ export default clerkMiddleware((auth, req) => {
   - ModalProvider 추가
 
 ## [Favoriting Functionality](https://www.youtube.com/watch?v=ADJKbuayubE&t=14136s)
+- `convex/schema.ts` 수정
+  - userFavorites 테이블 정의
+- `convex/board.ts` 수정
+  - favorite, unFavorite mutation 추가
+- `convex/boards.ts` 수정
+  - board 와 favorite 합친 정보로 전달하도록 수정
+- `app/(dashboard)/_components/board-card/index.tsx` 수정
+  - favorite, unFavorite mutation 연동
+  - toggleFavorite 으로 즐겨찾기 mutation 호출
+- `app/(dashboard)/_components/board-list.tsx` 수정
+  - favorite 정보 받아서 UI 업데이트
+- `app/(dashboard)/_components/board-card/footer.tsx` 수정
+  - 즐겨찾기 버튼 클릭 연결 변경 및 클릭시 네비게이션 되지 않도록 처리
 
 
 ## [Search Querying](https://www.youtube.com/watch?v=ADJKbuayubE&t=15492s)
