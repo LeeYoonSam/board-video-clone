@@ -294,6 +294,7 @@ export default clerkMiddleware((auth, req) => {
 - `app/layout.tsx` 수정
   - ModalProvider 추가
 
+
 ## [Favoriting Functionality](https://www.youtube.com/watch?v=ADJKbuayubE&t=14136s)
 - `convex/schema.ts` 수정
   - userFavorites 테이블 정의
@@ -311,6 +312,17 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Search Querying](https://www.youtube.com/watch?v=ADJKbuayubE&t=15492s)
+- `convex/board.ts` 수정
+  - 보드 삭제시 favorite 정보 제거
+- `convex/boards.ts` 수정
+  - get - title 검색 조건 추가
+  - `npm i convex-helpers` - 공식 패키지를 보완하는 유용한 코드 모음
+- `app/(dashboard)/_components/board-list.tsx` 수정
+  - 보드 검색 기능 추가
+- `app/(dashboard)/_components/empty-boards.tsx` 수정
+  - board/id 로 이동하는 router 추가
+- `app/(dashboard)/_components/new-board-button.tsx` 수정
+  - board/id 로 이동하는 router 추가
 
 
 ## [Canvas Layout](https://www.youtube.com/watch?v=ADJKbuayubE&t=16312s)
