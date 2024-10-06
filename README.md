@@ -326,6 +326,20 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Canvas Layout](https://www.youtube.com/watch?v=ADJKbuayubE&t=16312s)
+- app/board/[boardId]/page.tsx 수정
+  - Canvas 컴포넌트 추가
+- app/board/[boardId]/_components/canvas.tsx 생성
+  - Canvas 컴포넌트
+  - Info, Participants, Toolbar 컴포넌트 추가
+- app/board/[boardId]/_components/info.tsx 생성
+  - Info 컴포넌트
+  - 보드 정보
+- app/board/[boardId]/_components/participants.tsx 생성
+  - Participants 컴포넌트
+  - 참가자 리스트
+- app/board/[boardId]/_components/toolbar.tsx 생성
+  - Toolbar 컴포넌트
+  - 도구 모음
 
 
 ## [Liveblocks setup](https://www.youtube.com/watch?v=ADJKbuayubE&t=16970s)
