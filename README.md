@@ -343,6 +343,10 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Liveblocks setup](https://www.youtube.com/watch?v=ADJKbuayubE&t=16970s)
+### [liveblocks](https://liveblocks.io/)
+- `npm i @liveblocks/client`
+- `npm i @liveblocks/react`
+- `npx create-liveblocks-app@latest --init --framework react`
 
 
 ## [Room Authentication](https://www.youtube.com/watch?v=ADJKbuayubE&t=18013s)
