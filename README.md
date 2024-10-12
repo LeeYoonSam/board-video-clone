@@ -350,6 +350,16 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Room Authentication](https://www.youtube.com/watch?v=ADJKbuayubE&t=18013s)
+- Room Authentication
+  - `npm i @liveblocks/node`
+- `app/api/liveblocks-auth/route.ts` 생성
+  - 인증 및 세션 생성
+- `convex/board.ts` 수정
+  - get 메서드 추가
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - useSelf 를 사용해서 사용자 정보 획득
+- `liveblocks.config.ts` 수정
+  - 메타데이터 추가
 
 
 ## [Room Info](https://www.youtube.com/watch?v=ADJKbuayubE&t=19184s)
