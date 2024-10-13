@@ -363,6 +363,20 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Room Info](https://www.youtube.com/watch?v=ADJKbuayubE&t=19184s)
+- Skeleton 을 function 에서 함수 컴포넌트로 변경
+  - app/board/[boardId]/_components/participants.tsx 수정
+  - app/board/[boardId]/_components/toolbar.tsx 수정
+  - app/board/[boardId]/_components/loading.tsx 수정
+    - 서버사이드 렌더링 유지
+  - app/board/[boardId]/_components/info.tsx 수정
+- app/board/[boardId]/_components/info.tsx 수정
+  - logo + text 로고 적용
+  - 보드 이름 영역 추가 및 이름 변경 가능하도록 처리
+    - useRenameModal 사용해서 처리
+  - 하위 메뉴 구성
+    - Copy board link
+    - Rename
+    - Delete
 
 
 ## [Room Participants](https://www.youtube.com/watch?v=ADJKbuayubE&t=20183s)

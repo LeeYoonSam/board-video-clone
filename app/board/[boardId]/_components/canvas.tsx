@@ -14,13 +14,12 @@ export const Canvas = ({
 }: CanvasProps) => {
   
   const { name } = useSelf((me) => me.info);
-  console.log(name)
-
+  
   return (
     <main
       className="h-full w-full flex bg-neutral-100 touch-none"
     >
-      <Info />
+      <Info boardId={boardId} />
       <Participants />
       <Toolbar />
     </main>
