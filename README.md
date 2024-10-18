@@ -380,6 +380,13 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Room Participants](https://www.youtube.com/watch?v=ADJKbuayubE&t=20183s)
+- `app/board/[boardId]/_components/user-avatar.tsx` 생성
+  - 유저 아바타 컴포넌트
+  - `npx shadcn@latest add avatar`
+- `app/board/[boardId]/_components/participants.tsx` 수정
+  - 현재 보드 참가자 추가
+- `lib/utils.ts` 수정
+  - 유저 아바타 borderColor 지정하는 유틸 추가
 
 
 ## [Room Toolbar](https://www.youtube.com/watch?v=ADJKbuayubE&t=20986s)
