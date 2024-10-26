@@ -390,6 +390,10 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Room Toolbar](https://www.youtube.com/watch?v=ADJKbuayubE&t=20986s)
+- app/board/[boardId]/_components/tool-button.tsx 생성
+  - 툴바 버튼 컴포넌트
+- app/board/[boardId]/_components/toolbar.tsx 수정
+  - 툴바 버튼 추가
 
 
 ## [Canvas State](https://www.youtube.com/watch?v=ADJKbuayubE&t=21405s)
