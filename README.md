@@ -397,6 +397,12 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Canvas State](https://www.youtube.com/watch?v=ADJKbuayubE&t=21405s)
+- app/board/[boardId]/_components/toolbar.tsx 수정
+  - ToolButton onClick, isActive 조건 추가
+- app/board/[boardId]/_components/canvas.tsx 수정
+  - ToolButton 프로퍼티 추가
+- types/canvas.ts 생성
+  - Canvas 에서 사용할 모든 상태 추가
 
 
 ## [Cursors Presence](https://www.youtube.com/watch?v=ADJKbuayubE&t=22921s)
