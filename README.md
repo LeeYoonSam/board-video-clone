@@ -406,7 +406,23 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Cursors Presence](https://www.youtube.com/watch?v=ADJKbuayubE&t=22921s)
-
+- app/board/[boardId]/_components/canvas.tsx 수정
+  - svg(Scalable Vector Graphics) 추가
+  - CursorsPresence 컴포넌트 추가
+- app/board/[boardId]/_components/cursors-presence.tsx 생성
+  - 연결된 사용자들의 커서를 표시하는 컴포넌트
+  - 사용자별 커서 컴포넌트 추가
+- app/board/[boardId]/_components/cursor.tsx 생성
+  - 커서 컴포넌트
+  - foreignObject 에 커서 모양과 이름 표시
+- liveblocks.config.ts 수정
+  - Presence 에 Cursor 정보 추가
+- lib/utils.ts 수정
+  - pointerEventToCanvasPoint 추가
+  - 포인터 이벤트와 카메라로 커서 포지션 계산
+- components/room.tsx 수정
+  - throttle 로 커서 움짐임 부드럽게 처리
+  
 
 ## [Insert Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=24461s)
 
