@@ -326,18 +326,18 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Canvas Layout](https://www.youtube.com/watch?v=ADJKbuayubE&t=16312s)
-- app/board/[boardId]/page.tsx 수정
+- `app/board/[boardId]/page.tsx` 수정
   - Canvas 컴포넌트 추가
-- app/board/[boardId]/_components/canvas.tsx 생성
+- `app/board/[boardId]/_components/canvas.tsx` 생성
   - Canvas 컴포넌트
   - Info, Participants, Toolbar 컴포넌트 추가
-- app/board/[boardId]/_components/info.tsx 생성
+- `app/board/[boardId]/_components/info.tsx` 생성
   - Info 컴포넌트
   - 보드 정보
-- app/board/[boardId]/_components/participants.tsx 생성
+- `app/board/[boardId]/_components/participants.tsx` 생성
   - Participants 컴포넌트
   - 참가자 리스트
-- app/board/[boardId]/_components/toolbar.tsx 생성
+- `app/board/[boardId]/_components/toolbar.tsx` 생성
   - Toolbar 컴포넌트
   - 도구 모음
 
@@ -363,13 +363,13 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Room Info](https://www.youtube.com/watch?v=ADJKbuayubE&t=19184s)
-- Skeleton 을 function 에서 함수 컴포넌트로 변경
+- `Skeleton 을 function 에서 함수 컴포넌트로 변경`
   - app/board/[boardId]/_components/participants.tsx 수정
   - app/board/[boardId]/_components/toolbar.tsx 수정
   - app/board/[boardId]/_components/loading.tsx 수정
     - 서버사이드 렌더링 유지
   - app/board/[boardId]/_components/info.tsx 수정
-- app/board/[boardId]/_components/info.tsx 수정
+- `app/board/[boardId]/_components/info.tsx` 수정
   - logo + text 로고 적용
   - 보드 이름 영역 추가 및 이름 변경 가능하도록 처리
     - useRenameModal 사용해서 처리
@@ -390,42 +390,59 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Room Toolbar](https://www.youtube.com/watch?v=ADJKbuayubE&t=20986s)
-- app/board/[boardId]/_components/tool-button.tsx 생성
+- `app/board/[boardId]/_components/tool-button.tsx` 생성
   - 툴바 버튼 컴포넌트
-- app/board/[boardId]/_components/toolbar.tsx 수정
+- `app/board/[boardId]/_components/toolbar.tsx` 수정
   - 툴바 버튼 추가
 
 
 ## [Canvas State](https://www.youtube.com/watch?v=ADJKbuayubE&t=21405s)
-- app/board/[boardId]/_components/toolbar.tsx 수정
+- `app/board/[boardId]/_components/toolbar.tsx` 수정
   - ToolButton onClick, isActive 조건 추가
-- app/board/[boardId]/_components/canvas.tsx 수정
+- `app/board/[boardId]/_components/canvas.tsx` 수정
   - ToolButton 프로퍼티 추가
-- types/canvas.ts 생성
+- `types/canvas.ts` 생성
   - Canvas 에서 사용할 모든 상태 추가
 
 
 ## [Cursors Presence](https://www.youtube.com/watch?v=ADJKbuayubE&t=22921s)
-- app/board/[boardId]/_components/canvas.tsx 수정
+- `app/board/[boardId]/_components/canvas.tsx` 수정
   - svg(Scalable Vector Graphics) 추가
   - CursorsPresence 컴포넌트 추가
-- app/board/[boardId]/_components/cursors-presence.tsx 생성
+- `app/board/[boardId]/_components/cursors-presence.tsx` 생성
   - 연결된 사용자들의 커서를 표시하는 컴포넌트
   - 사용자별 커서 컴포넌트 추가
-- app/board/[boardId]/_components/cursor.tsx 생성
+- `app/board/[boardId]/_components/cursor.tsx` 생성
   - 커서 컴포넌트
   - foreignObject 에 커서 모양과 이름 표시
-- liveblocks.config.ts 수정
+- `liveblocks.config.ts` 수정
   - Presence 에 Cursor 정보 추가
-- lib/utils.ts 수정
+- `lib/utils.ts` 수정
   - pointerEventToCanvasPoint 추가
   - 포인터 이벤트와 카메라로 커서 포지션 계산
-- components/room.tsx 수정
+- `components/room.tsx` 수정
   - throttle 로 커서 움짐임 부드럽게 처리
   
 
 ## [Insert Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=24461s)
-
+- `liveblocks.config.ts` 수정
+  - Storage 추가 - layers, layersId
+- `types/canvas.ts` 수정
+  - Layer type 추가
+- `components/room.tsx` 수정
+  - initial storage 추가
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - 클릭시 레이어 추가
+  - svg 에 LayerPreview 추가
+  - 랜덤 문자열 생성 디펜던시 추가
+    - `npm i nanoid`
+- `app/board/[boardId]/_components/layer-preview.tsx` 생성
+  - LayerPreview 컴포넌트
+  - 레이어 타입에 따라 컴포넌트 표시
+- `app/board/[boardId]/_components/rectangle.tsx` 생성
+  - Rectaangle 컴포넌트
+  - Layer type Rectangle 처리
+  
 
 ## [Select Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=26407s)
 
