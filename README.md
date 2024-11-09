@@ -445,6 +445,13 @@ export default clerkMiddleware((auth, req) => {
   
 
 ## [Select Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=26407s)
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - onLayerPointerDown 추가
+  - 레이어 선택시 캔번스 상태 변경
+- `app/board/[boardId]/_components/rectangle.tsx` 수정
+  - rect fill, stroke 값 수정
+- `lib/utils.ts` 수정
+  - rgb 컬러를 hex 컬러로 변환하는 함수 추가
 
 
 ## [Selection Box](https://www.youtube.com/watch?v=ADJKbuayubE&t=27362s)
