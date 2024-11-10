@@ -455,6 +455,13 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Selection Box](https://www.youtube.com/watch?v=ADJKbuayubE&t=27362s)
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - SelectionBox 컴포넌트 추가
+- `app/board/[boardId]/_components/selection-box.tsx` 생성
+  - SelectionBox 컴포넌트
+  - 크기조절 rect 추가
+- `hooks/use-selection-bounds.ts` 생성
+  - 선택된 레이어의 x,y,w,h 를 계산하는 훅
 
 
 ## [Resize Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=28774s)
