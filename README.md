@@ -460,11 +460,25 @@ export default clerkMiddleware((auth, req) => {
 - `app/board/[boardId]/_components/selection-box.tsx` 생성
   - SelectionBox 컴포넌트
   - 크기조절 rect 추가
+  - 전체 레이어 경계를 벗어 나지 않도록 처리
 - `hooks/use-selection-bounds.ts` 생성
   - 선택된 레이어의 x,y,w,h 를 계산하는 훅
 
 
 ## [Resize Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=28774s)
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - SelectionBox 속성 onResizeHandlePointerDown 전달
+  - onResizeHandlePointerDown 추가
+    - SelectionBox 에서 선택된 박스의 코너와 위치, 크기 정보를 전달 받음
+    - canvasState 를 업데이트 하고 관련되어있는 훅이 실행
+  - onPointerMove 에서 리사이즈 상태 확인
+    - resizeSelectedLayer 를 실행
+      - resizeBounds 를 통해서 SelectionBox 에서 크기를 변경을 시도한 위치에 따라 크기를 변경
+- `app/board/[boardId]/_components/selection-box.tsx` 수정
+  - onResizeHandlePointerDown 에 현재 선택된 레이어의 SelectionBox 의 Side, bounds 를 전달
+- `lib/utils.ts` 수정
+  - resizeBounds 추가
+    - 모서리 드래그에 따라 크기와 위치를 변경
 
 
 ## [Translate Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=29872s)
