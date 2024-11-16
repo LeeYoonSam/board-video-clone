@@ -482,6 +482,11 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Translate Layer](https://www.youtube.com/watch?v=ADJKbuayubE&t=29872s)
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - onPointerMove - CanvasMode.Translating 일때 선택된 레이어 이동 처리
+    - translateSelectedLayers 선택된 레이어 이동
+  - onPointerUp - 클릭 후 액션
+    - unselectLayers 레이어가 아닌 영역 클릭시 레이어 선택 해제
 
 
 ## [Color change & Deletion](https://www.youtube.com/watch?v=ADJKbuayubE&t=30689s)
