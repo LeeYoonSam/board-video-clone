@@ -490,7 +490,15 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Color change & Deletion](https://www.youtube.com/watch?v=ADJKbuayubE&t=30689s)
-
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - SelectionTools 컴포넌트 추가
+- `app/board/[boardId]/_components/selection-tools.tsx` 생성
+  - SelectionTools 컴포넌트
+  - 선택된 레이어 컬러 변경, 삭제 버튼 추가
+- `app/board/[boardId]/_components/color-picker.tsx` 생성
+  - 컬러 피커 컴포넌트
+- `hooks/use-delete-layers.ts` 생성
+  - 선택된 레이어 삭제 훅
 
 ## [Layer Depth](https://www.youtube.com/watch?v=ADJKbuayubE&t=31809s)
 
