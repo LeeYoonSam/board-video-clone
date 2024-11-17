@@ -507,6 +507,12 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Selection Net](https://www.youtube.com/watch?v=ADJKbuayubE&t=32206s)
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - SelectionNet 추가
+    - 드래그로 여러 레이어 선택 가능하도록 처리
+- `lib/utils.ts` 수정
+  - findIntersectingLayersWithRectangle 추가
+    - 두 Point의 겹치는 범위 계산
 
 
 ## [Other Elements](https://www.youtube.com/watch?v=ADJKbuayubE&t=33113s)
