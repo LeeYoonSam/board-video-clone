@@ -501,6 +501,9 @@ export default clerkMiddleware((auth, req) => {
   - 선택된 레이어 삭제 훅
 
 ## [Layer Depth](https://www.youtube.com/watch?v=ADJKbuayubE&t=31809s)
+- `app/board/[boardId]/_components/selection-tools.tsx` 수정
+  - moveToFront, moveToBack 추가
+  - layerList 에서 현재 선택된 레이어의 인덱스를 변경
 
 
 ## [Selection Net](https://www.youtube.com/watch?v=ADJKbuayubE&t=32206s)
