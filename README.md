@@ -516,7 +516,21 @@ export default clerkMiddleware((auth, req) => {
 
 
 ## [Other Elements](https://www.youtube.com/watch?v=ADJKbuayubE&t=33113s)
-
+- `app/board/[boardId]/_components/layer-preview.tsx` 수정
+  - Ellipse 컴포넌트 추가
+  - Text 컴포넌트 추가
+  - Note 컴포넌트 추가
+- `app/board/[boardId]/_components/ellipse.tsx` 생성
+  - Ellipse 컴포넌트
+- `app/board/[boardId]/_components/text.tsx` 생성
+  - Text 컴포넌트
+  - `npm i react-contenteditable`
+    - 편집 가능한 콘텐츠가 있는 div의 React 컴포넌트
+- `app/board/[boardId]/_components/note.tsx` 수정
+  - Note 컴포넌트
+- `lib/utils.ts` 수정
+  - getContrastingTextColor 추가
+    - 컬러 대비 텍스트 컬러 계산
 
 ## [Pencil & Drawing](https://www.youtube.com/watch?v=ADJKbuayubE&t=34371s)
 
