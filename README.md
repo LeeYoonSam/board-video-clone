@@ -532,7 +532,36 @@ export default clerkMiddleware((auth, req) => {
   - getContrastingTextColor 추가
     - 컬러 대비 텍스트 컬러 계산
 
+
 ## [Pencil & Drawing](https://www.youtube.com/watch?v=ADJKbuayubE&t=34371s)
+- `liveblocks.config.ts` 수정
+  - pencilDraft, penColor 추가
+- `components/room.tsx` 수정
+  - pencilDraft, penColor 초기화
+- `app/board/[boardId]/_components/canvas.tsx` 수정
+  - 마우스 포인터 이벤트에 따라 Pencil 케이스 추가
+    - onPointerDown
+    - onPointerMove
+    - onPointerUp
+  - Path 컴포넌트 추가
+    - 펜슬로 그릴때 경로 표시
+  - useDisableScrollBounce 추가
+  - 키보드 이벤트로 undo, redo 처리(useEffect 이벤트 리스너 추가)
+- `lib/utils.ts` 수정
+  - penPointsToPathLayer 추가
+  - getSvgPathFromStroke 추가
+- `app/board/[boardId]/_components/layer-preview.tsx` 수정
+  - LayerType.Path 추가
+  - Path 컴포넌트 추가
+- `app/board/[boardId]/_components/path.tsx` 생성
+  - Path 컴포넌트
+  - `npm i perfect-freehand` 디펜던시 추가
+- `app/board/[boardId]/_components/cursors-presence.tsx` 수정
+  - 다른 상대가 펜슬 사용시 Drafts 추가
+- `hooks/use-disable-scroll-bounce.ts` 생성
+  - 백그라운드에서 메인 페이지를 스크롤할 수 없도록 전체 화면 모달이나 메뉴를 표시할 때와 같이 일시적으로 스크롤을 비활성
+- `app/board/[boardId]/_components/selection-tools.tsx` 수정
+  - toArray -> toImmutableArray 로 변경
 
 
 ## [Deployment](https://www.youtube.com/watch?v=ADJKbuayubE&t=36782s)
