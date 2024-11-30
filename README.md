@@ -25,6 +25,9 @@ Key Features:
 - 🌐 Next.js 14 framework
 - 💅 TailwindCSS & ShadcnUI styling
 
+## Screenshots
+![image](./screenshots/board-list.png)
+![image](./screenshots/board-detail.png)
 
 ## [Intro & Demo](https://www.youtube.com/watch?v=ADJKbuayubE&t=0s)
 ## [Additional information](https://www.youtube.com/watch?v=ADJKbuayubE&t=222s)
